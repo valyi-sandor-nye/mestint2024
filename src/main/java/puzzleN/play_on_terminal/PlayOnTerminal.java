@@ -30,7 +30,7 @@ public class PlayOnTerminal {
         }
     }
 
-    public static Direction directionByChar(Character c){
+    private static Direction directionByChar(Character c){
         switch (Character.toLowerCase(c.charValue())  ) {
             case 'a': return Direction.WEST;
             case 'w': return Direction.NORTH;
@@ -72,7 +72,8 @@ public class PlayOnTerminal {
         puzzle = new PuzzleN(size);
         System.out.println("A lépések: a kurzor billentyűt egyszer megnyomva tudsz lépni.\n"+
                 "Az 'x' karaktert megnyomva tudod abbahagyni.\n"+
-                "Az 's' karaktert megnyomva tudod elmenteni az aktuális pályát : \n"+puzzle);
+                "Az 'i' karaktert megnyomva tudsz beolvasni egy előzetesen mentett pályát\n"+
+                "Az 'o' karaktert megnyomva tudod elmenteni az aktuális pályát : \n"+puzzle);
         Character userInput = ' ';
         while (userInput != 'x' && userInput != 'X') {
             System.out.println("A lépésed ide üsd be a/s/d/w: ");
